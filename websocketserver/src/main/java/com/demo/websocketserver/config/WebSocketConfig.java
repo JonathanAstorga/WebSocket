@@ -20,7 +20,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         // Habilita un broker de mensajes simple en memoria para los destinos que comienzan con "/tema".
         // Los clientes se pueden suscribir a estos destinos para recibir mensajes.
-        registry.enableSimpleBroker("/tema");
+        registry.enableSimpleBroker("/tema", "/usuario");
 
         // Establece los prefijos para los destinos de los mensajes que están destinados a los métodos
         // manejadores de mensajes en la aplicación (controladores con @MessageMapping).
